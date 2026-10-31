@@ -1,1 +1,343 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meroyoga | Video</title>
+
+<style>
+
+/* =========================================================
+   GLOBAL VARIABLES
+   ========================================================= */
+
+:root {
+  --color-dark: #232F52;
+  --color-light: #F8F3EF;
+  --color-medium: #F2C65D;
+  --color-green: #A8C9A8;
+  --color-petrol: #78B5B2;
+
+  --color-text: #535D6F;
+  --color-white: #FFFFFF;
+
+  --content-width: 1120px;
+  --section-space: clamp(4rem, 8vw, 7rem);
+  --radius: 18px;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-light);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  color: var(--color-dark);
+  font-weight: normal;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  width: min(100% - 40px, var(--content-width));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HERO / VIDEO SECTION
+   ========================================================= */
+
+.hero {
+  background: var(--color-light);
+  padding: var(--section-space) 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Header / Main title */
+
+.hero-header {
+  margin-bottom: 38px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 0;
+}
+
+/* Video player */
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-dark);
+  margin-bottom: 42px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Subheading underneath video */
+
+.video-subheading {
+  max-width: 720px;
+  margin: 0 auto 20px;
+}
+
+.video-subheading h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 0;
+}
+
+/* Supporting text */
+
+.video-description {
+  max-width: 680px;
+  margin: 0 auto 32px;
+}
+
+.video-description p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.button {
+  display: inline-block;
+  padding: 15px 34px;
+  border-radius: 50px;
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.25s ease,
+              transform 0.25s ease;
+}
+
+.button:hover {
+  background: #3D4D70;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  background: var(--color-light);
+  padding: 32px 20px;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  border-top: 1px solid rgba(35, 47, 82, 0.15);
+  padding-top: 26px;
+}
+
+.footer-brand {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+}
+
+.footer p {
+  font-size: 13px;
+  margin: 0;
+  color: var(--color-text);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: min(100% - 32px, var(--content-width));
+  }
+
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .hero-header {
+    margin-bottom: 28px;
+  }
+
+  .video-wrapper {
+    margin-bottom: 32px;
+    border-radius: 12px;
+  }
+
+  .video-subheading {
+    margin-bottom: 16px;
+  }
+
+  .video-description p {
+    font-size: 1rem;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .footer {
+    padding: 26px 16px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =======================================================
+     HERO / VIDEO SECTION
+     ======================================================= -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <!-- MAIN HEADER -->
+
+      <div class="hero-header">
+
+        <h1>
+          Your video headline goes here
+        </h1>
+
+      </div>
+
+
+      <!-- VIDEO PLAYER -->
+
+      <div class="video-wrapper">
+
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          title="Meroyoga video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+
+      <!-- SUBHEADING -->
+
+      <div class="video-subheading">
+
+        <h2>
+          Your subheading goes here
+        </h2>
+
+      </div>
+
+
+      <!-- SUPPORTING TEXT -->
+
+      <div class="video-description">
+
+        <p>
+          Add your introductory text here. This is where you
+          can share a little more about the video, what to
+          expect, or what you would like the viewer to take
+          away from watching it.
+        </p>
+
+      </div>
+
+
+      <!-- BUTTON -->
+
+      <a href="#" class="button">
+        Your button text
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      Meroyoga
+    </div>
+
+    <p>
+      © 2026 Meroyoga. All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
+
