@@ -537,6 +537,93 @@ footer p {
     padding: 2rem 1.3rem;
   }
 }
+
+  /* =========================
+   MEET YOUR COACH
+========================= */
+
+.meet-coach {
+  background: var(--color-light);
+  color: var(--color-dark);
+  padding: var(--section-space) 0;
+}
+
+.meet-coach-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.meet-coach-image {
+  min-height: 430px;
+  border-radius: var(--radius);
+  background: linear-gradient(
+    145deg,
+    rgba(130,149,147,.25),
+    rgba(224,183,171,.55)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(35,47,82,.6);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+  
+<!-- =========================
+     SECTION : MEET COACH
+========================= -->
+
+.meet-coach-content .eyebrow {
+  color: #887785;
+}
+
+.meet-coach-content h2 {
+  color: var(--color-dark);
+  margin-bottom: .5rem;
+}
+
+.meet-coach-content h3 {
+  color: #887785;
+  font-size: 1.35rem;
+  margin-bottom: 1.3rem;
+}
+
+.meet-coach-content p {
+  color: #535D6F;
+  font-size: .98rem;
+}
+
+.meet-coach-cta {
+  display: block;
+  margin-top: 1.6rem;
+  color: var(--color-dark);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .meet-coach-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .meet-coach-image {
+    min-height: 320px;
+  }
+
+  .meet-coach-content {
+    text-align: center;
+  }
+}
 </style>
 </head>
 
