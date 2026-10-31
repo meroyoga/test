@@ -29,8 +29,8 @@
 
 /* Background depth */
 --color_1_bg-dark: radial-gradient(ellipse at center, #354263 0%, #232F52 75%);
---color_2_bg-cream: radial-gradient(ellipse at center, #FFFFFF 0%, #F8F3EF 75%);
---color_3_bg-white: radial-gradient(ellipse at center, #FFFFFF 45%, #F8F3EF 150%);
+--color_2_bg-medium: radial-gradient(ellipse at center, #FFFFFF 0%, #F8F3EF 75%);
+--color_3_bg-light: radial-gradient(ellipse at center, #FFFFFF 45%, #F8F3EF 150%);
 
   /* ACCENT COLORS - HEADINGS AND BUTTONS ONLY */
 
@@ -270,7 +270,7 @@ button {
 .hero {
   padding: clamp(70px, 9vw, 115px) 0;
   text-align: center;
-  background: var(--color_1);
+  background: var(--color_1_bg-dark);
   color: var(--color_3);
   overflow: hidden;
 }
@@ -427,7 +427,7 @@ button {
    ========================================================= */
 
 .everyday {
-  background: var(--color_2);
+  background: var(--color_2_bg-medium);
 }
 
 .everyday-intro {
@@ -494,7 +494,7 @@ button {
    ========================================================= */
 
 .support {
-  background: var(--color_1);
+  background: var(--color_1_bg-dark);
   color: var(--color_3);
 }
 
@@ -549,7 +549,7 @@ button {
    ========================================================= */
 
 .included {
-  background: var(--color_3);
+  background: var(--color_3_bg-white);
 }
 
 .flip-grid {
@@ -650,7 +650,7 @@ button {
    ========================================================= */
 
 .approach {
-  background: var(--color_1);
+  background: var(--color_1_bg-dark);
   color: var(--color_3);
 }
 
@@ -698,7 +698,7 @@ button {
    ========================================================= */
 
 .guidance {
-  background: var(--color_2);
+  background: var(--color_2_bg-medium);
 }
 
 .guidance-layout {
@@ -769,7 +769,7 @@ button {
    ========================================================= */
 
 .starting-point {
-  background: var(--color_3);
+  background: var(--color_3_bg-light);
 }
 
 .starting-grid {
@@ -818,7 +818,7 @@ button {
    ========================================================= */
 
 .testimonials {
-  background: var(--color_2);
+  background: var(--color_2_bg-medium);
 }
 
 .testimonial-grid {
@@ -867,7 +867,7 @@ button {
    ========================================================= */
 
 .faq {
-  background: var(--color_3);
+  background: var(--color_3_bg-light);
 }
 
 .faq-list {
@@ -918,7 +918,7 @@ button {
    ========================================================= */
 
 .final-cta {
-  background: var(--color_1);
+  background: var(--color_3_bg-dark);
   text-align: center;
   color: var(--color_3);
   padding: var(--section_padding) 20px;
@@ -942,7 +942,8 @@ button {
    ========================================================= */
 
 .footer {
-  background: var(--color_1);
+  border-top: 1px solid rgba(255,255,255,.2);
+  background: var(--color_3_bg-dark);
   padding: 65px 20px 30px;
   color: var(--color_3);
 }
@@ -993,8 +994,7 @@ button {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.2);
-  padding-top: 22px;
+   padding-top: 22px;
   font-size: 12px;
   color: rgba(255,255,255,.7);
 }
