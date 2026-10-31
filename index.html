@@ -799,7 +799,59 @@ footer strong {
     text-align: center;
   }
 }
-   
+
+
+   /* =========================
+   INFINITE SCROLLING TEXT
+========================= */
+
+.marquee {
+  --marquee-font-size: 1.5rem;
+  --marquee-duration: 30s;
+  --marquee-gap: 2rem;
+  --marquee-color: var(--color-light);
+
+  width: 100%;
+  overflow: hidden;
+  padding: 1.2rem 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll var(--marquee-duration) linear infinite;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: var(--marquee-gap);
+  padding-right: var(--marquee-gap);
+  white-space: nowrap;
+}
+
+.marquee-group span {
+  font-size: var(--marquee-font-size);
+  color: var(--marquee-color);
+  font-weight: 500;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
 </style>
 
 </head>
